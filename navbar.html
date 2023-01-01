@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+    <head>
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: transparent;
+            }
+
+            @media screen and (min-width: 400px) {
+                nav{
+                    width: 100%; 
+                }
+
+                li{
+                    display: none;
+                }
+
+                button{
+                    display: none;
+                }
+
+                input{
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width: 800px) {
+                nav{
+                    width: 100%;
+                }
+
+                li{
+                    display: inline;
+                }
+
+                button{
+                    display: none;
+                }
+
+                input{
+                    display: none;
+                }
+
+            }
+
+            nav{
+                display: inline-flex;
+                list-style-type: none;
+                width: 100%;
+                background-color: #3C3737;
+                font-size: 20px;
+            
+            }
+
+            ul{
+                margin: 20px;
+                list-style-type: none;
+                display: inline-flex;
+                color: white;
+            }
+
+            li a{
+                margin: 25px;
+                text-decoration: none;
+
+            }
+
+            li:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            nav > span > input{
+                margin: 15px;
+                padding: 5px;
+            }
+
+            nav > h2{
+                padding: 1%;
+            }
+
+            #primary{
+                display: flex;
+                align-content: flex-end;
+                justify-content: space-around;
+            }
+
+            #primary > span{
+                display: inline-block;
+                justify-content: center;
+                width: fit-content;
+            }
+
+            #primary > span > p{
+                display: block;
+                justify-content: center;
+                position: relative;
+            }
+        </style>
+    </head>
+<nav>
+    <h2>Summertime</h2>
+    <ul>
+        <li><a>Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li>
+        <li><a>Help</a></li>
+        <li><a>Name</a></li>
+    </ul>
+</nav>
+<div id="picture-container">
+    <img src="" alt="">
+</div>
+<div id="primary">
+    <span>
+        <h2>Heading</h2>
+        <br>
+        <p>iuhxjr kdsj xekxorlkoikn[pkrjfe;ls [;ojlkm<br> idfolm pijpkjendm k <br>oeijflkpjd </p>
+    </span>
+    <span>
+        <h2>Heading</h2>
+        <br>
+        <p>iuhxjr kdsj xekxorlkoikn[pkrjfe;ls [;ojlkm<br> idfolm pijpkjendm k <br>oeijflkpjd </p>
+    </span>
+</div>
+</div>
+</html>
