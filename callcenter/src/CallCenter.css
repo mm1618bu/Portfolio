@@ -1,0 +1,56 @@
+.CallCenter {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  
+  .Ready {
+    background-color: #7eff7e; /* Light green for Ready state */
+  }
+  
+  .Talking {
+    background-color: #80bfff; /* Light blue for Talking state */
+  }
+  
+  .WrapUp {
+    background-color: #ffcc80; /* Light orange for Wrap up state */
+  }
+  
+  .Lunch {
+    background-color: #ffb3b3; /* Light red for Lunch state */
+  }
+  
+  .Break {
+    background-color: #c2c2f0; /* Light purple for Break state */
+  }
+  
+  .Timer {
+    display: none; /* Hide the Timer component for styling purposes */
+  }
+
+  p{
+    padding: 0;
+    margin: 0;
+  }
+
+  /* CallCenter.css */
+.CallCenterGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .AgentsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+  
+  .Agent {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+  }
+  
