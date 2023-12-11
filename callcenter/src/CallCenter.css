@@ -1,116 +1,103 @@
-/* CallCenter. css */
+/* CallCenter.css */
 .CallCenter {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  
-  .Ready {
-    background-color: #7eff7e; /* Light green for Ready state */
-  }
-  
-  .Talking {
-    background-color: orange; /* Light blue for Talking state */
-  }
-  
-  .WrapUp {
-    background-color: #ffcc80; /* Light orange for Wrap up state */
-  }
-  
-  .Lunch {
-    background-color: #ffb3b3; /* Light red for Lunch state */
-  }
-  
-  .Break {
-    background-color: #ffb3b3; /* Light purple for Break state */
-  }
-  
-  .Timer {
-    display: none; /* Hide the Timer component for styling purposes */
-  }
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
 
-  p{
-    padding: 0;
-    margin: 0;
-  }
+.Ready {
+  background-color: #7eff7e; /* Light green for Ready state */
+}
 
-  .CallCenterGrid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .AgentsGrid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 16px;
-    width: 100%;
-  }
-  
-  .Agent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-  }
-  
-  .Agent span {
-    width: 100%;
-  }
-  
-  .Agent p {
-    margin: 0;
-    padding: 5px;
-  }
-  
-  .Agent p:first-child {
-    font-weight: bold;
-  }
+.Talking {
+  background-color: orange; /* Light blue for Talking state */
+}
 
-  .QueueCounts,
-  .StateCounts,
-  .LocationCounts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .QueueCounts p,
-  .StateCounts p,
-  .LocationCounts p {
-    margin: 5px;
-    font-size: 16px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .QueueCounts p {
-    background-color: #3498db; /* Blue color for call counts */
-    color: black;
-    font-size: 16px;
-  }
-  
-  .StateCounts p {
-    background-color: #27ae60; /* Green color for agent counts */
-    color: black;
-    font-size: 16px;
-  }
+.WrapUp {
+  background-color: #ffcc80; /* Light orange for Wrap up state */
+}
 
-  .LocationCounts p{
-    background-color: grey;
-    color: black;
-    font-size: 16px;
-  }
-  
-  /* Add this to your CSS file or style section */
+.Lunch,
+.Break {
+  background-color: #ffb3b3; /* Light red for Lunch state, Light purple for Break state */
+}
 
-/* Add this to your CSS file or style section */
+.Timer {
+  display: none; /* Hide the Timer component for styling purposes */
+}
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.CallCenterGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AgentsGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.Agent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.Agent span {
+  width: 100%;
+}
+
+.Agent p {
+  margin: 0;
+  padding: 5px;
+}
+
+.Agent p:first-child {
+  font-weight: bold;
+}
+
+.QueueCounts,
+.StateCounts,
+.LocationCounts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.QueueCounts p,
+.StateCounts p,
+.LocationCounts p {
+  margin: 5px;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.QueueCounts p {
+  background-color: #3498db; /* Blue color for call counts */
+}
+
+.StateCounts p {
+  background-color: #27ae60; /* Green color for agent counts */
+}
+
+.LocationCounts p {
+  background-color: grey;
+}
+
+/* time.css */
 #time {
   text-align: center;
   padding: 20px;
@@ -154,13 +141,12 @@ h1 {
 
 .QueueCounts,
 .StateCounts,
-.LocationCounts {
-  margin-top: 20px;
-}
-
-/* Container for the tables */
+.LocationCounts,
 .TableContainer {
+  margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 table {

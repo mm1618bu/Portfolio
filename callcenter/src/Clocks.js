@@ -8,10 +8,11 @@ const Clocks = () => {
     const timeZones = [
       'America/New_York', // New York, USA
       'Europe/London',     // London, UK
-      'Europe/Berlin',     // Berlin, Germany
+      'Africa/Lagos',
+      'Asia/Singapore',
       'Asia/Tokyo',        // Tokyo, Japan
       'Australia/Sydney',  // Sydney, Australia
-      'America/Los_Angeles' // Los Angeles, USA
+      'America/Los_Angeles', // Los Angeles, USA
     ];
 
     const fetchCurrentTime = async () => {

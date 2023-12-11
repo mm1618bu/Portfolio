@@ -7,10 +7,12 @@ const Timer = ({ agents, updateAgentState }) => {
     Break: 200, // 20 seconds (for example) in the Break state
     Ready: 120, // 30 seconds (for example) in the Ready state
     Lunch: 900,
+    Project: 350,
+    Meeting: 500
   });
 
   const getRandomState = () => {
-    const states = ['Ready', 'Talking', 'Lunch', 'Break'];
+    const states = ['Ready', 'Talking', 'Lunch', 'Break', 'Project', 'Meeting'];
     const randomIndex = Math.floor(Math.random() * states.length);
     return states[randomIndex];
   };
@@ -32,6 +34,12 @@ const Timer = ({ agents, updateAgentState }) => {
         // Transition back to Ready state after 180 seconds in Lunch state
         updateAgentState(agentIdToUpdate, 'Ready');
       } else if (currentState === 'Talking' && elapsedTime >= stateDurations.Talking) {
+        // Transition back to Ready state after 180 seconds in Talking state
+        updateAgentState(agentIdToUpdate, 'Ready');
+      } else if (currentState === 'Project' && elapsedTime >= stateDurations.Project) {
+        // Transition back to Ready state after 180 seconds in Talking state
+        updateAgentState(agentIdToUpdate, 'Ready');
+      } else if (currentState === 'Meeting' && elapsedTime >= stateDurations.Meeting) {
         // Transition back to Ready state after 180 seconds in Talking state
         updateAgentState(agentIdToUpdate, 'Ready');
       } else {
