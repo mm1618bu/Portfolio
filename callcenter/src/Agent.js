@@ -1,16 +1,17 @@
 // Agent.js
 import React from 'react';
 
-const Agent = ({ name, state, queue, elapsedTime }) => (
+const Agent = ({ name, state, queue, location, elapsedTime }) => (
   <div className={`Agent ${state}`}>
-    <p>{name}</p>
-    <p>{state}</p>
-    <p>{queue}</p>
-    {elapsedTime > 0 && (
-      <p>
-        Elapsed Time: {formatElapsedTime(elapsedTime)}
-      </p>
-    )}
+    <span>
+      <p>{name}</p>
+      <p>{state}</p>
+    </span>
+    <span>
+      {state === 'Talking' && <p>{queue}</p>}
+      {state === 'Talking' && <p>{location}</p>}
+      <p>{formatElapsedTime(elapsedTime)}</p>
+    </span>
   </div>
 );
 
