@@ -49,6 +49,9 @@ const topProgrammingLanguages = [
 
 const location = [
   "United States",
+  "United States T1",
+  "United States T2",
+  "United States T3",
   "Canada",
   "Germany",
   "United Kingdom",
@@ -71,7 +74,6 @@ const location = [
   "Luxembourg",
   "Iceland",
   "Hong Kong",
-  "Israel",
   "Italy",
   "Spain",
   "South Korea",
@@ -84,7 +86,6 @@ const location = [
   "Estonia",
   "Cyprus",
   "Czech Republic",
-  "Malta",
   "Portugal",
   "Lithuania"
 ];
@@ -110,7 +111,7 @@ const initialAgents = (count) =>
   }));
 
 const CallCenter = () => {
-  const [agentsCount, setAgentsCount] = useState(6);
+  const [agentsCount, setAgentsCount] = useState(1);
   const [agents, setAgents] = useState(initialAgents(agentsCount));
   const [selectedLocation, setSelectedLocation] = useState(null);
 
