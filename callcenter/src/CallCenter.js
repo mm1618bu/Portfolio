@@ -131,7 +131,7 @@ const initialAgents = (count) =>
   }));
 
 const CallCenter = () => {
-  const [agentsCount, setAgentsCount] = useState(1);
+  const [agentsCount, setAgentsCount] = useState(20);
   const [agents, setAgents] = useState(initialAgents(agentsCount));
 
   const updateAgentState = (agentId, newState, elapsedTime = 0) => {
@@ -289,6 +289,7 @@ const CallCenter = () => {
         </table>
       </div>
       </div>
+      <br></br>
       <div className="AgentsGrid">
         {agents.map((agent) => (
           <Agent
