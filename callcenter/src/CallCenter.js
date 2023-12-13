@@ -225,24 +225,12 @@ const CallCenter = () => {
       <div>
         <label htmlFor="agentCount">Number of Agents:</label>
         <select id="agentCount" onChange={handleAgentCountChange} value={agentsCount}>
-          {[2, 3, 4, 5, 6, 8, 9, 12, 20, 50, 100, 500, 1000].map((count) => (
+          {[20, 50, 100, 500, 1000].map((count) => (
             <option key={count} value={count}>
               {count}
             </option>
           ))}
         </select>
-        {selectedLocation === null && (
-          <div>
-            <label htmlFor="location">Select Location:</label>
-            <select id="location" onChange={handleLocationChange}>
-              {location.map((loc) => (
-                <option key={loc} value={loc}>
-                  {loc}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
       </div>
       <div className='TableContainer'>
       <div className="QueueCounts">
