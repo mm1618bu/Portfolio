@@ -48,12 +48,12 @@ const topProgrammingLanguages = [
 ];
 
 const location = [
-  "Uunited States T1",
-  "Uunited States T2",
-  "Uunited States T3",
-  "Uunited States T4",
-  "Uunited States T5",
-  "Uunited States T6",
+  "United States T1",
+  "United States T2",
+  "United States T3",
+  "United States T4",
+  "United States T5",
+  "United States T6",
   "Canada",
   "Mexico",
   "England",
@@ -133,7 +133,6 @@ const initialAgents = (count) =>
 const CallCenter = () => {
   const [agentsCount, setAgentsCount] = useState(1);
   const [agents, setAgents] = useState(initialAgents(agentsCount));
-  const [selectedLocation, setSelectedLocation] = useState(null);
 
   const updateAgentState = (agentId, newState, elapsedTime = 0) => {
     setAgents((prevAgents) => {
@@ -215,9 +214,6 @@ const CallCenter = () => {
     setAgents(initialAgents(newAgentsCount));
   };
 
-  const handleLocationChange = (event) => {
-    setSelectedLocation(event.target.value);
-  };
 
   return (
     <div className="CallCenterGrid">
