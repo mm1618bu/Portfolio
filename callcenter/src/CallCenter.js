@@ -159,7 +159,7 @@ const CallCenter = () => {
       ).length;
 
       // Check if the maximum limit is exceeded
-      if (newBreakLunchCount <= 5) {
+      if (newBreakLunchCount <= 3) {
         return updatedAgents;
       } else {
         // Revert the state change if the limit is exceeded
