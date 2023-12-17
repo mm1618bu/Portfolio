@@ -54,6 +54,10 @@ const location = [
   "United States T4",
   "United States T5",
   "United States T6",
+  "United States T7",
+  "United States T8",
+  "United States T9",
+  "United States T10",
   "Canada",
   "Mexico",
   "England",
@@ -131,7 +135,7 @@ const initialAgents = (count) =>
   }));
 
 const CallCenter = () => {
-  const [agentsCount, setAgentsCount] = useState(20);
+  const [agentsCount, setAgentsCount] = useState(50);
   const [agents, setAgents] = useState(initialAgents(agentsCount));
 
   const updateAgentState = (agentId, newState, elapsedTime = 0) => {
@@ -159,7 +163,7 @@ const CallCenter = () => {
       ).length;
 
       // Check if the maximum limit is exceeded
-      if (newBreakLunchCount <= 3) {
+      if (newBreakLunchCount <= 10) {
         return updatedAgents;
       } else {
         // Revert the state change if the limit is exceeded
@@ -221,7 +225,7 @@ const CallCenter = () => {
       <div>
         <label htmlFor="agentCount">Number of Agents:</label>
         <select id="agentCount" onChange={handleAgentCountChange} value={agentsCount}>
-          {[20, 50, 100, 500, 1000].map((count) => (
+          {[50, 100, 500, 1000].map((count) => (
             <option key={count} value={count}>
               {count}
             </option>
