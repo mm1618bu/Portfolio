@@ -159,11 +159,11 @@ const CallCenter = () => {
       );
 
       const newBreakLunchCount = updatedAgents.filter(
-        (agent) => agent.state === 'Break' || agent.state === 'Lunch' || agent.state === 'Project' || agent.state === 'Meeting'
+        (agent) => agent.state === 'Break' || agent.state === 'Lunch' || agent.state === 'Project' || agent.state === 'Meeting' || agent.state === 'Supervisor'
       ).length;
-
+ 
       // Check if the maximum limit is exceeded
-      if (newBreakLunchCount <= 10) {
+      if (newBreakLunchCount <= 20) {
         return updatedAgents;
       } else {
         // Revert the state change if the limit is exceeded

@@ -8,11 +8,12 @@ const Timer = ({ agents, updateAgentState }) => {
     Ready: 120, // 30 seconds (for example) in the Ready state
     Lunch: 900,
     Project: 500,
-    Meeting: 500
+    Meeting: 500,
+    Supervisor: 1000
   });
 
   const getRandomState = () => {
-    const states = ['Ready', 'Talking', 'Lunch', 'Break', 'Project', 'Meeting'];
+    const states = ['Ready', 'Talking', 'Lunch', 'Break', 'Project', 'Meeting', 'Supervisor'];
     const randomIndex = Math.floor(Math.random() * states.length);
     return states[randomIndex];
   };

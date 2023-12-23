@@ -64,6 +64,3 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input{
-  border-color: gold;
-}
