@@ -6,19 +6,53 @@ import './CallCenter.css';
 
 // Custom agent names
 const customAgentNames = [
-  'John Doe',
-  'Jane Doe',
-  'Alex Smith',
-  'Emma Johnson',
-  'Michael Brown',
-  'Olivia Davis',
-  'Daniel Wilson',
-  'Sophia Taylor',
-  'Matthew Anderson',
-  'Emily Thomas',
-  'William Harris',
-  'Ava Miller',
-  'Christopher Baker'
+  "John Doe",
+  "Jane Smith",
+  "Robert Johnson",
+  "Emily Davis",
+  "Michael Brown",
+  "Sophia Wilson",
+  "William Miller",
+  "Olivia Anderson",
+  "James Taylor",
+  "Emma Martinez",
+  "Daniel Garcia",
+  "Ava Jackson",
+  "Matthew Harris",
+  "Isabella Thomas",
+  "Christopher White",
+  "Amelia Moore",
+  "David Robinson",
+  "Mia Lee",
+  "Andrew Walker",
+  "Ella Hall",
+  "Joseph Perez",
+  "Grace Green",
+  "Benjamin Lewis",
+  "Chloe Hill",
+  "Samuel Scott",
+  "Avery Adams",
+  "Victoria Turner",
+  "Jackson Clark",
+  "Scarlett Baker",
+  "Logan Wright",
+  "Lily Murphy",
+  "Gabriel Hall",
+  "Aria Young",
+  "Caleb Garcia",
+  "Zoe Hernandez",
+  "Luke Nelson",
+  "Madison King",
+  "Henry Foster",
+  "Aubrey Martinez",
+  "Owen Harris",
+  "Addison Thomas",
+  "Ethan Turner",
+  "Nora Walker",
+  "Dylan Parker",
+  "Brooklyn Adams",
+  "Nicholas Cooper",
+  "Penelope Price"
 ];
 
 const topProgrammingLanguages = [
@@ -48,16 +82,56 @@ const topProgrammingLanguages = [
 ];
 
 const location = [
-  "United States T1",
-  "United States T2",
-  "United States T3",
-  "United States T4",
-  "United States T5",
-  "United States T6",
-  "United States T7",
-  "United States T8",
-  "United States T9",
-  "United States T10",
+  "Alabama",
+  "Alaska",
+  "Arizona",
+  "Arkansas",
+  "California",
+  "Colorado",
+  "Connecticut",
+  "Delaware",
+  "Florida",
+  "Georgia",
+  "Hawaii",
+  "Idaho",
+  "Illinois",
+  "Indiana",
+  "Iowa",
+  "Kansas",
+  "Kentucky",
+  "Louisiana",
+  "Maine",
+  "Maryland",
+  "Massachusetts",
+  "Michigan",
+  "Minnesota",
+  "Mississippi",
+  "Missouri",
+  "Montana",
+  "Nebraska",
+  "Nevada",
+  "New Hampshire",
+  "New Jersey",
+  "New Mexico",
+  "New York",
+  "North Carolina",
+  "North Dakota",
+  "Ohio",
+  "Oklahoma",
+  "Oregon",
+  "Pennsylvania",
+  "Rhode Island",
+  "South Carolina",
+  "South Dakota",
+  "Tennessee",
+  "Texas",
+  "Utah",
+  "Vermont",
+  "Virginia",
+  "Washington",
+  "West Virginia",
+  "Wisconsin",
+  "Wyoming",
   "Canada",
   "Mexico",
   "England",
@@ -128,7 +202,7 @@ const initialAgents = (count) =>
   Array.from({ length: count }, (_, index) => ({
     id: index + 1,
     name: customAgentNames[index % customAgentNames.length], // Use custom names cyclically
-    state: 'Ready',
+    state: 'NotReady',
     elapsedTime: 0,
     queue: null,
     location: null
@@ -159,11 +233,10 @@ const CallCenter = () => {
       );
 
       const newBreakLunchCount = updatedAgents.filter(
-        (agent) => agent.state === 'Break' || agent.state === 'Lunch' || agent.state === 'Project' || agent.state === 'Meeting' || agent.state === 'Supervisor'
-      ).length;
+        (agent) => agent.state === 'Break' || agent.state === 'Lunch' || agent.state === 'Project' || agent.state === 'Meeting').length;
  
       // Check if the maximum limit is exceeded
-      if (newBreakLunchCount <= 20) {
+      if (newBreakLunchCount <= 15) {
         return updatedAgents;
       } else {
         // Revert the state change if the limit is exceeded

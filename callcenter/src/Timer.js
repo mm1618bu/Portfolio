@@ -5,15 +5,15 @@ const Timer = ({ agents, updateAgentState }) => {
   const [stateDurations] = useState({
     Talking: 900, // 180 seconds (3 minutes) in the Talking state
     Break: 900, // 20 seconds (for example) in the Break state
-    Ready: 120, // 30 seconds (for example) in the Ready state
-    Lunch: 900,
+    Ready: 300, // 30 seconds (for example) in the Ready state
+    Lunch: 1800,
     Project: 500,
     Meeting: 500,
-    Supervisor: 1000
+    NotReady: 30
   });
 
   const getRandomState = () => {
-    const states = ['Ready', 'Talking', 'Lunch', 'Break', 'Project', 'Meeting', 'Supervisor'];
+    const states = ['Ready', 'Talking', 'Lunch', 'Break', 'Project', 'Meeting', 'NotReady'];
     const randomIndex = Math.floor(Math.random() * states.length);
     return states[randomIndex];
   };
@@ -43,7 +43,11 @@ const Timer = ({ agents, updateAgentState }) => {
       } else if (currentState === 'Meeting' && elapsedTime >= stateDurations.Meeting) {
         // Transition back to Ready state after 180 seconds in Talking state
         updateAgentState(agentIdToUpdate, 'Ready');
-      } else {
+      } else if (currentState === 'NotReady' && elapsedTime >= stateDurations.NotReady) {
+        // Transition back to Ready state after 180 seconds in Talking state
+        updateAgentState(agentIdToUpdate, 'Ready');
+      }
+       else {
         // Update elapsed time for the current state
         updateAgentState(agentIdToUpdate, currentState, elapsedTime);
       }
