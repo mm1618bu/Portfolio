@@ -1,6 +1,6 @@
 /* Style for the whole container */
 div {
-  max-width: 800px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -9,6 +9,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  border: 1px solid black;
 }
 
 /* Style for table header */
@@ -26,10 +27,6 @@ tbody td {
   border-bottom: 1px solid #ddd;
 }
 
-/* Style for alternate rows */
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
 
 /* Style for dropdown */
 label {
@@ -55,8 +52,6 @@ div > table {
 
 /* Style for statistics tables header */
 div > table th {
-  background-color: #4CAF50;
-  color: white;
   font-weight: bold;
   padding: 8px;
 }
@@ -67,7 +62,4 @@ div > table tbody td {
   border-bottom: 1px solid #ddd;
 }
 
-/* Style for alternate rows in statistics tables */
-div > table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+
