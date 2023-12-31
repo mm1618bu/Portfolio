@@ -81,7 +81,7 @@ const RandomNumberGenerator = () => {
       {randomSet.length > 0 && (
         <div>
           <h2>Random Set:</h2>
-          <p>{randomSet.join(' ')}</p>
+          <p>{randomSet.join('')}</p>
         </div>
       )}
     </div>
