@@ -1,0 +1,18 @@
+/* StatusBar.css */
+.progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-top: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4caf50; /* Green color for progress */
+    transition: width 0.3s ease-in-out; /* Add a smooth transition effect */
+    border-radius: 4px;
+  }
+  

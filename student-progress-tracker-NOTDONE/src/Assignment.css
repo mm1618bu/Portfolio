@@ -1,0 +1,25 @@
+/* Assignment.css */
+.assignment-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mini-progress-bar-container {
+    width: 100px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-left: 10px;
+    overflow: hidden;
+  }
+  
+  .mini-progress-bar {
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+    background-color: aqua;
+  }
+
+  select{
+    display: inline;
+    margin-left: 32px;
+  }
