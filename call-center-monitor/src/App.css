@@ -1,0 +1,70 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 5px;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 2px solid #f7f6f6;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold; /* Combine with the next rule for better readability */
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Add some spacing to the table cells for better readability */
+td, th {
+  padding-left: 10px;
+}
+
+/* Add styling to the duration cell for emphasis */
+td:nth-child(3) {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Define colors for each state */
+td.Not {
+  background-color: #ff6347; /* Tomato */
+}
+
+td.Ready {
+  background-color: #32cd32; /* LimeGreen */
+}
+
+td.Talking {
+  background-color: #4169e1; /* RoyalBlue */
+}
+
+td.Lunch {
+  background-color: #ffa500; /* Orange */
+}
+

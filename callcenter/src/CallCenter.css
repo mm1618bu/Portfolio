@@ -40,7 +40,7 @@ p {
 
 .AgentsGrid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   gap: 16px;
   width: 100%;
 }
