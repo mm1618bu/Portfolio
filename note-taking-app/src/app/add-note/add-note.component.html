@@ -1,0 +1,11 @@
+<!-- src/app/add-note/add-note.component.html -->
+
+<div class="add-note">
+    <h2>Add Note</h2>
+    <label>Title:</label>
+    <input [(ngModel)]="note.title" placeholder="Enter title" />
+    <label>Content:</label>
+    <textarea [(ngModel)]="note.content" placeholder="Enter content"></textarea>
+    <button (click)="addNote()">Add Note</button>
+  </div>
+  
