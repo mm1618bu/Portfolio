@@ -1,5 +1,6 @@
 // Agent.js
 import React from 'react';
+import './Agent.css';
 
 const Agent = ({ name, state, queue, location, elapsedTime }) => (
   <div className={`Agent ${state}`}>
@@ -8,9 +9,9 @@ const Agent = ({ name, state, queue, location, elapsedTime }) => (
       <p>{state}</p>
     </span>
     <span>
-      {state === 'Talking' && <p>{queue}</p>}
+      {state === 'Talking' && <p>FC_{queue}</p>}
       {state === 'Talking' && <p>{location}</p>}
-      <p>{formatElapsedTime(elapsedTime)}</p>
+      <p className='timer'>{formatElapsedTime(elapsedTime)}</p>
     </span>
   </div>
 );
@@ -18,7 +19,7 @@ const Agent = ({ name, state, queue, location, elapsedTime }) => (
 const formatElapsedTime = (elapsedTime) => {
   const minutes = Math.floor(elapsedTime / 60);
   const seconds = elapsedTime % 60;
-  return `${minutes}m ${seconds}s`;
+  return `${minutes}:${seconds}`;
 };
 
 export default Agent;

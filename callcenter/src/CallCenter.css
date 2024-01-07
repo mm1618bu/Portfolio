@@ -7,11 +7,11 @@
 }
 
 .Ready {
-  background-color: #7eff7e; /* Light green for Ready state */
+  background-color: #2eff2e; /* Light green for Ready state */
 }
 
 .Talking {
-  background-color: orange; /* Light blue for Talking state */
+  background-color: rgb(245, 178, 53); /* Light blue for Talking state */
 }
 
 .WrapUp {
@@ -20,7 +20,7 @@
 
 .Lunch,
 .Break {
-  background-color: #ffb3b3; /* Light red for Lunch state, Light purple for Break state */
+  background-color: #ff1b1b9a; /* Light red for Lunch state, Light purple for Break state */
 }
 
 .Timer {
@@ -40,7 +40,7 @@ p {
 
 .AgentsGrid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   width: 100%;
 }
@@ -150,8 +150,7 @@ h1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
-  margin-right: 20px; /* Adjust the margin as needed */
+  margin-right: 10px; /* Adjust the margin as needed */
 }
 
 thead {
@@ -165,6 +164,6 @@ th, td {
 }
 
 th {
-  background-color: #4CAF50;
+  background-color: #127688;
   color: white;
 }

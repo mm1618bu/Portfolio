@@ -236,7 +236,7 @@ const CallCenter = () => {
         (agent) => agent.state === 'Break' || agent.state === 'Lunch' || agent.state === 'Project' || agent.state === 'Meeting').length;
  
       // Check if the maximum limit is exceeded
-      if (newBreakLunchCount <= 10) {
+      if (newBreakLunchCount <= 4) {
         return updatedAgents;
       } else {
         // Revert the state change if the limit is exceeded
@@ -298,7 +298,7 @@ const CallCenter = () => {
       <div>
         <label htmlFor="agentCount">Number of Agents:</label>
         <select id="agentCount" onChange={handleAgentCountChange} value={agentsCount}>
-          {[50, 100, 500, 1000].map((count) => (
+          {[8, 16, 24, 50, 100, 500, 1000].map((count) => (
             <option key={count} value={count}>
               {count}
             </option>

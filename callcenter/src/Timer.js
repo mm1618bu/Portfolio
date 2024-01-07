@@ -3,12 +3,12 @@ import React, { useEffect, useCallback, useState } from 'react';
 
 const Timer = ({ agents, updateAgentState }) => {
   const [stateDurations] = useState({
-    Talking: 900, // 180 seconds (3 minutes) in the Talking state
-    Break: 900, // 20 seconds (for example) in the Break state
-    Ready: 300, // 30 seconds (for example) in the Ready state
+    Talking: 600, // 180 seconds (3 minutes) in the Talking state
+    Break: 600, // 20 seconds (for example) in the Break state
+    Ready: 30, // 30 seconds (for example) in the Ready state
     Lunch: 1800,
-    Project: 500,
-    Meeting: 500,
+    Project: 120,
+    Meeting: 120,
     NotReady: 30
   });
 
