@@ -8,8 +8,8 @@ const Gradebook = () => {
   useEffect(() => {
     // Fetch data from an API or initialize with sample data
     // For simplicity, I'm using hardcoded sample data here
-    const initialStudents = ['Student1', 'Student2', 'Student3', 'Student4', 'Student5', 'Student6' ];
-    const initialAssignments = ['Assignment1', 'Assignment2', 'Assignment3', 'Assignment4', 'Assignment5', 'Assignment6'];
+    const initialStudents = ['Alice Johnson', 'Bob Smith', 'Charlie Brown', 'Diana Davis', 'Edward Turner', 'Fiona Anderson', 'George White', 'Holly Clark', 'Ivan Garcia', 'Julia Martinez'];
+    const initialAssignments = ['Homework 1', 'Project Proposal', 'Lab Report', 'Essay Assignment', 'Midterm Exam', 'Coding Challenge', 'Group Presentation', 'Final Project', 'Research Paper', 'Online Quiz'];
     const initialGrades = Array.from({ length: initialStudents.length }, () =>
       Array(initialAssignments.length).fill(null)
     );
