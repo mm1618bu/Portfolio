@@ -41,38 +41,40 @@ const CashRegister = () => {
           <h1 className="text-primary mb-4">Cash Register Counter</h1>
           <Form>
             <Form.Group as={Row}>
-              <Form.Label column xs={6} md={4}>
+              <Form.Label column xs={12} md={4}>
                 Expected Amount
               </Form.Label>
-              <Col xs={6} md={8}>
+              <Col xs={12} md={8}>
                 <Form.Control
                   type="number"
                   placeholder="Enter expected amount"
                   value={expectedAmount}
                   onChange={(e) => setExpectedAmount(e.target.value)}
+                  size="lg"
                 />
               </Col>
             </Form.Group>
             {denominationsList.map((denomination) => (
               <Form.Group as={Row} key={denomination}>
-                <Form.Label column xs={6} md={4}>
+                <Form.Label column xs={12} md={4}>
                   {denomination}
                 </Form.Label>
-                <Col xs={6} md={8}>
+                <Col xs={12} md={8}>
                   <Form.Control
                     type="number"
                     name={denomination}
                     value={denominations[denomination] || 0}
                     onChange={handleChange}
+                    size="lg"
                   />
                 </Col>
               </Form.Group>
             ))}
+            <Button variant="primary" size="lg" onClick={handleCount} className="mt-3">
+              Count
+            </Button>
+            <p className="font-weight-bold mt-3 text-success">{countedAmount}</p>
           </Form>
-          <Button variant="primary" onClick={handleCount} className="mt-3">
-            Count
-          </Button>
-          <p className="font-weight-bold mt-3 text-success">{countedAmount}</p>
         </Col>
       </Row>
     </Container>

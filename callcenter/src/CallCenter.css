@@ -7,11 +7,11 @@
 }
 
 .Ready {
-  background-color: #2eff2e; /* Light green for Ready state */
+  background-color: #02ff02; /* Light green for Ready state */
 }
 
 .Talking {
-  background-color: rgb(245, 178, 53); /* Light blue for Talking state */
+  background-color: rgb(247, 162, 5); /* Light blue for Talking state */
 }
 
 .WrapUp {
@@ -20,7 +20,7 @@
 
 .Lunch,
 .Break {
-  background-color: #ff1b1b9a; /* Light red for Lunch state, Light purple for Break state */
+  background-color: #d323239a; /* Light red for Lunch state, Light purple for Break state */
 }
 
 .Timer {

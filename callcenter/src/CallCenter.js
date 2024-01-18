@@ -73,7 +73,6 @@ const topProgrammingLanguages = [
   'Vue',
   'Next.js',
   'PHP',
-  'Perl',
   'Linux',
   'SQL',
   'MongoDB',
@@ -298,7 +297,7 @@ const CallCenter = () => {
       <div>
         <label htmlFor="agentCount">Number of Agents:</label>
         <select id="agentCount" onChange={handleAgentCountChange} value={agentsCount}>
-          {[8, 16, 24, 50, 100, 500, 1000].map((count) => (
+          {[2,4,8, 16, 24, 50, 100, 500, 1000].map((count) => (
             <option key={count} value={count}>
               {count}
             </option>
