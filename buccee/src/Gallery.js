@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './Gallery.css';
 import photo1 from './img/image2.jpg';
+import photo2 from './img/image3.jpg';
 import ImageInfo from './ImageInfo';
 
 const Gallery = () => {
@@ -18,10 +19,12 @@ const Gallery = () => {
     <div className="gallery">
       {/* Display your photos here */}
       {/* Example: */}
-      <img src="./img/grid_0.png" alt="Photo 1" onClick={() => handleClick('./img/grid_0.png')}
-      />
-      <img src={photo1} alt="Photo 2" onClick={() => handleClick('photo2.jpg')}
-      />
+      <img src={photo1} alt="Photo 1" onClick={() => handleClick('./img/grid_0.png')}/>
+      <img src={photo1} alt="Photo 2" onClick={() => handleClick('photo2.jpg')}/>
+      <img src={photo2} alt="Photo 2" onClick={() => handleClick('photo2.jpg')}/>
+      <img src={photo2} alt="Photo 2" onClick={() => handleClick('photo2.jpg')}/>
+      <img src={photo1} alt="Photo 2" onClick={() => handleClick('photo2.jpg')}/>
+      <img src={photo1} alt="Photo 2" onClick={() => handleClick('photo2.jpg')}/>
       {/* Add more photos as needed */}
 
       {/* Show ImageInfo component when an image is clicked */}
