@@ -31,46 +31,52 @@ import ImageInfo from './ImageInfo';
 const Gallery = () => {
   const [showImageInfo, setShowImageInfo] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [imageText, setImageText] = useState('');
 
-  const handleClick = (imageUrl) => {
-    setSelectedImage(imageUrl);
+  const handleClick = (image, text) => {
+    setSelectedImage(image);
+    setImageText(text);
     setShowImageInfo(true);
   };
+
+  const handleClose = () => {
+    setShowImageInfo(false);
+  }
 
   return (
     <div className="gallery">
       {/* Display your photos here */}
       {/* Example: */}
-      <img src={photo1} alt="Photo 1" onClick={() => handleClick('./img/grid_0.png')}/>
-      <img src={photo2} alt="Photo 2" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo3} alt="Photo 3" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo4} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo5} alt="Photo 3" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo6} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo7} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo8} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo9} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo10} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo11} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo12} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo13} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo14} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo15} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo16} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo17} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo18} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo19} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo20} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo21} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo22} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo23} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
-      <img src={photo24} alt="Photo 4" onClick={() => handleClick('photo2.jpg')}/>
+      <img src={photo1} alt="Photo 1" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo2} alt="Photo 2" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo3} alt="Photo 3" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo4} alt="Photo 4" onClick={() => handleClick('photo2.jpg','')}/>
+      <img src={photo5} alt="Photo 3" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo6} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo7} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo8} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo9} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo10} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo11} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo12} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo13} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo14} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo15} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo16} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo17} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo18} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo19} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo20} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo21} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo22} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo23} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
+      <img src={photo24} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
       {/* Add more photos as needed */}
 
       {/* Show ImageInfo component when an image is clicked */}
       {showImageInfo && (
         <div className="image-info-overlay">
-          <p>{ImageInfo}</p>
+          <ImageInfo image={selectedImage} text={imageText} onClose={handleClose}/>
         </div>
       )}
     </div>
