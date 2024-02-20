@@ -2,11 +2,10 @@
 
 import React from 'react';
 
-const ImageInfo = ({ imageUrl, alt }) => {
+const ImageInfo = () => {
   return (
     <div className="image-info">
-      <img src={imageUrl} alt={alt} />
-      {/* Additional information can be displayed here */}
+      <p>This is a sample piece of text</p>
     </div>
   );
 };
