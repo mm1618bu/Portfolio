@@ -47,10 +47,10 @@ const Gallery = () => {
     <div className="gallery">
       {/* Display your photos here */}
       {/* Example: */}
-      <img src={photo1} alt="Photo 1" onClick={() => handleClick('photo2.jpg','Help me!')}/>
-      <img src={photo2} alt="Photo 2" onClick={() => handleClick('photo2.jpg','Help me!')}/>
-      <img src={photo3} alt="Photo 3" onClick={() => handleClick('photo2.jpg','Help me!')}/>
-      <img src={photo4} alt="Photo 4" onClick={() => handleClick('photo2.jpg','')}/>
+      <img src={photo1} alt="Photo 1" onClick={() => handleClick('photo2.jpg','Buccee is enjoying his time in the snowy mountains in Almaty!')}/>
+      <img src={photo2} alt="Photo 2" onClick={() => handleClick('photo2.jpg','Another Picture in the mountains.')}/>
+      <img src={photo3} alt="Photo 3" onClick={() => handleClick('photo2.jpg','Just ate a delicious bowl of noodles.')}/>
+      <img src={photo4} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Chillin at the mall.')}/>
       <img src={photo5} alt="Photo 3" onClick={() => handleClick('photo2.jpg','Help me!')}/>
       <img src={photo6} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>
       <img src={photo7} alt="Photo 4" onClick={() => handleClick('photo2.jpg','Help me!')}/>

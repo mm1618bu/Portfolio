@@ -8,7 +8,7 @@ import Footer from './Footer';
 function App() {
   return (
     <div className="App">
-      <h1>Photo Gallery</h1>
+      <h1>Where is Buccee?</h1>
       <Gallery />
       <Footer />
     </div>

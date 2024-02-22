@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
     return(
-        <div>Footer</div>
+        <div>&copy; 2024 by Mitchell Martinez</div>
     );
 };
 
