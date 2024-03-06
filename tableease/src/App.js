@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import WaitingForm from './WaitingForm';
 
 function App() {
   // State to manage table status and capacity
@@ -80,15 +81,16 @@ function App() {
       <div className="tables">
         {tables.map((table, index) => (
           <div key={index} className={`table ${table.isFull ? 'full' : 'empty'}`} onClick={() => clearTable(index)}>
-            {table.id} - Capacity: {table.capacity} - Occupancy: {table.currentOccupancy}
+            Table <b>{table.id}</b>  Capacity: {table.capacity}  Occupancy: {table.currentOccupancy}
           </div>
         ))}
       </div>
-      <button onClick={() => assignTable(2)}>Assign Table 2</button>
-      <button onClick={() => assignTable(3)}>Assign Table 3</button>
-      <button onClick={() => assignTable(4)}>Assign Table 4</button>
-      <button onClick={() => assignTable(5)}>Assign Table 5</button>
-      <button onClick={() => assignTable(6)}>Assign Table 6</button>
+      <h2>Assign Table</h2>
+      <button onClick={() => assignTable(2)}>2 People</button>
+      <button onClick={() => assignTable(3)}>3 People</button>
+      <button onClick={() => assignTable(4)}>4 People</button>
+      <button onClick={() => assignTable(5)}>5 People</button>
+      <button onClick={() => assignTable(6)}>6 People</button>
       <div className="waiting-queue">
         <h2>Waiting Queue</h2>
         <ul>
@@ -97,6 +99,7 @@ function App() {
           ))}
         </ul>
       </div>
+      <WaitingForm />
     </div>
   );
 }
