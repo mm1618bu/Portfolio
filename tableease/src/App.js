@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import WaitingForm from './WaitingForm';
+import TableIcon from './TableIcon';
+import TableManager from './TableManager';
 
 function App() {
   // State to manage table status and capacity
@@ -100,6 +102,8 @@ function App() {
         </ul>
       </div>
       <WaitingForm />
+      <TableIcon />
+      <TableManager />
     </div>
   );
 }

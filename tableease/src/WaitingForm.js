@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './WaitingForm.css'; // Make sure to import the CSS file
 
 export default function WaitingForm() {
   const [formData, setFormData] = useState({ name: '', phone: '', party: '', time: '' });
@@ -15,8 +16,8 @@ export default function WaitingForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleFormSubmit}>
+    <div className="form-table-container">
+      <form onSubmit={handleFormSubmit} className="form">
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" required onChange={handleInputChange} />
         <label htmlFor="phone">Phone:</label>
@@ -27,28 +28,26 @@ export default function WaitingForm() {
         <input type="time" id="time" name="time" required onChange={handleInputChange} />
         <button type="submit">Submit</button>
       </form>
-      <div>
-      <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Party Size</th>
-      <th>Time</th>
-    </tr>
-  </thead>
-  <tbody>
-    {reservations.map((reservation, index) => (
-      <tr key={index}>
-        <td>{reservation.name}</td>
-        <td>{reservation.phone}</td>
-        <td>{reservation.party}</td>
-        <td>{reservation.time}</td>
-      </tr>
-    ))}
-  </tbody>
-</table>
-      </div>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Party Size</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {reservations.map((reservation, index) => (
+            <tr key={index}>
+              <td>{reservation.name}</td>
+              <td>{reservation.phone}</td>
+              <td>{reservation.party}</td>
+              <td>{reservation.time}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
