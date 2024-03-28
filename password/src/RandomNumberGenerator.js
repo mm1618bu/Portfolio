@@ -50,6 +50,7 @@ const RandomNumberGenerator = () => {
   return (
     <div>
       <h1>Passphrase Generator</h1>
+      <p>Click on the button below to generate a passphrase to use.</p>
       <button onClick={handleGeneratePassphrase}>Generate Passphrase</button>
       <br />
       {passphrase && (

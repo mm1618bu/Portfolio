@@ -77,7 +77,9 @@ const topProgrammingLanguages = [
   'SQL',
   'MongoDB',
   'Wordpress',
-  'Magento'
+  'Magento',
+  'ADVISING',
+  'HELP DESK'
 ];
 
 const location = [

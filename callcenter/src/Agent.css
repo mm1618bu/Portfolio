@@ -2,18 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 8px;
     margin-bottom: 10px;
     background-color: #996c6c;
   }
   
   .Agent span {
     flex: 1;
-  }
-  
-  .Agent p {
-    margin: 0;
   }
   
   .timer{

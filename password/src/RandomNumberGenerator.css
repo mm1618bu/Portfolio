@@ -30,8 +30,7 @@ label {
 }
 
 input,
-select,
-button {
+select {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -47,6 +46,8 @@ button {
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  width: 25%;
+  padding: 15px;
 }
 
 button:hover {

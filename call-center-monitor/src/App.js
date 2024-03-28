@@ -13,7 +13,7 @@ const generateRandomData = (
   talkingAgentsCount
 ) => {
   const states = ['Not', 'Ready', 'Talking', 'Lunch'];
-  const queues = ['Queue 1', 'Queue 2', 'Queue 3'];
+  const queues = ['React_CS', 'Java_CS', 'Python_CS'];
   const countries = ['Qatar', 'Luxembourg', 'Singapore', 'Brunei', 'Ireland', 'Norway', 'United Arab Emirates', 'Kuwait', 'Switzerland', 'Hong Kong', 'Saudi Arabia', 'Netherlands', 'Bahrain', 'Austria', 'Australia', 'Germany', 'Canada', 'Sweden', 'Belgium', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
   let updatedState;
@@ -106,7 +106,7 @@ const App = () => {
     const agents = ['John Smith', 'Alice Johnson', 'Robert Davis', 'Emily White', 'Michael Brown', 'Olivia Martinez', 'William Taylor', 'Sophia Anderson', 'James Harris', 'Ava Wilson', 'Daniel Thompson', 'Emma Davis', 'Matthew Garcia', 'Isabella Miller', 'Christopher Martinez', 'Amelia Johnson', 'David White', 'Sophie Taylor', 'Daniel Robinson', 'Olivia Lee', 'Andrew Moore', 'Grace Harris', 'Joseph Taylor', 'Avery Wilson', 'Oliver Robinson', 'Ella Davis', 'Ryan Anderson', 'Chloe Smith', 'Samuel White', 'Mia Taylor', 'Nicholas Davis', 'Lily Robinson', 'Benjamin Harris', 'Charlotte Wilson', 'Jackson Brown', 'Aria Smith', 'Logan Garcia', 'Sofia Wilson', 'Ethan Robinson']; // Add more agents as needed
     const currentTime = Date.now();
     const initialData = agents.map((agent) =>
-      generateRandomData(agent, currentTime, currentTime, 'Not', 15, null, null)
+      generateRandomData(agent, currentTime, currentTime, 'Not', 10, null, null)
     );
     setData(initialData);
 
