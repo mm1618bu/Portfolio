@@ -1,0 +1,51 @@
+.place{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* Added a valid property value */
+    padding: 14px;
+    margin: 14px;
+    cursor: pointer;
+    font: 24px Arial, sans-serif;
+    width: 10%;
+}
+
+.day {
+  background-color: #f9f9f9; /* light color for day */
+  color: #333; /* dark text color for day */
+}
+
+.night {
+  background-color: #333; /* dark color for night */
+  color: #f9f9f9; /* light text color for night */
+}
+
+.place.day {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.place.night {
+  background-color: #333;
+  color: #f9f9f9;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    font: 16px Arial, sans-serif;
+    font-weight: 800; 
+}
+
+.timeblock{
+  letter-spacing: 2px;
+}
+
+.title{
+  font-size: 24px;
+  font-weight: 800;
+}
