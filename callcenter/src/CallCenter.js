@@ -83,56 +83,7 @@ const topProgrammingLanguages = [
 ];
 
 const location = [
-  "Alabama",
-  "Alaska",
-  "Arizona",
-  "Arkansas",
-  "California",
-  "Colorado",
-  "Connecticut",
-  "Delaware",
-  "Florida",
-  "Georgia",
-  "Hawaii",
-  "Idaho",
-  "Illinois",
-  "Indiana",
-  "Iowa",
-  "Kansas",
-  "Kentucky",
-  "Louisiana",
-  "Maine",
-  "Maryland",
-  "Massachusetts",
-  "Michigan",
-  "Minnesota",
-  "Mississippi",
-  "Missouri",
-  "Montana",
-  "Nebraska",
-  "Nevada",
-  "New Hampshire",
-  "New Jersey",
-  "New Mexico",
-  "New York",
-  "North Carolina",
-  "North Dakota",
-  "Ohio",
-  "Oklahoma",
-  "Oregon",
-  "Pennsylvania",
-  "Rhode Island",
-  "South Carolina",
-  "South Dakota",
-  "Tennessee",
-  "Texas",
-  "Utah",
-  "Vermont",
-  "Virginia",
-  "Washington",
-  "West Virginia",
-  "Wisconsin",
-  "Wyoming",
+  "USA",
   "Canada",
   "Mexico",
   "England",
@@ -237,7 +188,7 @@ const CallCenter = () => {
         (agent) => agent.state === 'Break' || agent.state === 'Lunch' || agent.state === 'Project' || agent.state === 'Meeting').length;
  
       // Check if the maximum limit is exceeded
-      if (newBreakLunchCount <= 4) {
+      if (newBreakLunchCount <= 6) {
         return updatedAgents;
       } else {
         // Revert the state change if the limit is exceeded
@@ -299,7 +250,7 @@ const CallCenter = () => {
       <div>
         <label htmlFor="agentCount">Number of Agents:</label>
         <select id="agentCount" onChange={handleAgentCountChange} value={agentsCount}>
-          {[2,4,8, 16, 24, 50, 100, 500, 1000].map((count) => (
+          {[8, 16, 24, 36, 50, 80, 100, 250, 500, 750, 1000].map((count) => (
             <option key={count} value={count}>
               {count}
             </option>
