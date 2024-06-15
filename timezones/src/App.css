@@ -49,3 +49,30 @@
   font-size: 24px;
   font-weight: 800;
 }
+
+progress {
+  /* Width of the progress bar */
+  width: 100%;
+
+  /* Height of the progress bar */
+  height: 20px;
+
+  /* Remove default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Change the color of the progress bar */
+progress::-webkit-progress-bar {
+  background-color: #eee;
+}
+
+progress::-webkit-progress-value {
+  /* Change the color of the actual progress */
+  background-color: #4caf50;
+}
+
+progress::-moz-progress-bar {
+  /* Change the color of the actual progress */
+  background-color: #4caf50;
+}

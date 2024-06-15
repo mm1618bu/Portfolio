@@ -3,10 +3,13 @@ import './App.css';
 
 const TimezoneClock = ({ timezone }) => {
   const [time, setTime] = useState(new Date());
+  const [second, setSecond] = useState(time.getSeconds());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime(new Date());
+      const newTime = new Date();
+      setTime(newTime);
+      setSecond(newTime.getSeconds());
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -24,9 +27,9 @@ const TimezoneClock = ({ timezone }) => {
   return (
     <div className={`${isPM ? 'night' : 'day'} place`}>
       <p className='timeblock'>{timezoneName} <br/> {formattedTime}</p>
+      <progress value={second} max="60"></progress>
     </div>
   );
-
 };
 
 const App = () => { 

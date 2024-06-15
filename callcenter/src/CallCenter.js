@@ -76,8 +76,6 @@ const topProgrammingLanguages = [
   'Linux',
   'SQL',
   'MongoDB',
-  'Wordpress',
-  'Magento',
   'ADVISING',
   'HELP DESK'
 ];
@@ -149,7 +147,8 @@ const location = [
      "Boston College",
      "Tufts University",
      "MIT",
-     "Brandeis University"
+     "Brandeis University",
+     "CS50 External"
  ];
 
 const getRandomQueue = (languagesArray) => {

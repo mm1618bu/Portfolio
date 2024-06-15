@@ -13,7 +13,7 @@ const Timer = ({ agents, updateAgentState }) => {
   });
 
   const getRandomState = () => {
-    const states = ['Ready', 'Talking', 'Lunch', 'Break', 'Project', 'Meeting', 'NotReady'];
+    const states = ['Ready', 'Talking', 'Lunch', 'Break', 'Project', 'Meeting'];
     const randomIndex = Math.floor(Math.random() * states.length);
     return states[randomIndex];
   };
