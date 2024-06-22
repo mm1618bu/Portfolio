@@ -50,9 +50,7 @@ const customAgentNames = [
   "Ethan Turner",
   "Nora Walker",
   "Dylan Parker",
-  "Brooklyn Adams",
-  "Nicholas Cooper",
-  "Penelope Price"
+  "Brooklyn Adams"
 ];
 
 const topProgrammingLanguages = [
@@ -199,7 +197,7 @@ const CallCenter = () => {
         (agent) => agent.state === 'Break' || agent.state === 'Lunch' || agent.state === 'Project' || agent.state === 'Meeting').length;
  
       // Check if the maximum limit is exceeded
-      if (newBreakLunchCount <= 6) {
+      if (newBreakLunchCount <= 4) {
         return updatedAgents;
       } else {
         // Revert the state change if the limit is exceeded
