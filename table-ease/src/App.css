@@ -1,10 +1,18 @@
-.loginpage{
+:root{
 }
 
+.loginpage{}
 .loginbanner{}
-
 .loginportal{}
 
 .registerpage{}
 .registerbanner{}
 .registerpotral{}
+
+.navbar{}
+.navlinks{}
+.navlinks a{}
+
+.sidebar{}
+.sidebarlinks{}
+.sidebar a{}
