@@ -5,6 +5,23 @@
     --background-color: #f4f4f4;
     --border-radius: 5px;
 }
+
+.App {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Adjust 250px to match the width of your Sidebar */
+  grid-template-areas: "sidebar content";
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.Sidebar {
+  grid-area: sidebar;
+  /* Additional styles for your sidebar */
+}
+
+.Content {
+  grid-area: content;
+  /* Styles for the content area */
+}
   
 body {
   font-family: Arial, sans-serif;

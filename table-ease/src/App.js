@@ -8,20 +8,22 @@ import Logout from './components/Logout';
 import ForgotPassword from './components/ForgotPassword';
 import Homepage from './components/Homepage';
 import AdminDashboard from './components/AdminDashboard';
+import Sidebar from './components/Sidebar';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Homepage />
-      <Login />
-      <Register />
-      <Navbar />
-      <Logout />
-      <PageNotFound />
-      <ForgotPassword />
-      <AdminDashboard />
+      <Sidebar className="Sidebar"/>
+      <div className="Content">
+        <Navbar />
+        <Homepage />
+        <Login />
+        <Register />
+        <Logout />
+        <PageNotFound />
+        <ForgotPassword />
+        <AdminDashboard />
+      </div>
     </div>
   );
 }
-
-export default App;
