@@ -36,7 +36,6 @@ public class BookingService {
     }
 
     public void deleteBooking(Long id) {
-        // Add logic to delete a booking by its ID
         bookingRepository.deleteById(id);
     }
 

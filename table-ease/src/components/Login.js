@@ -9,13 +9,18 @@ export default function Login() {
         <div className='loginportal'>
             <h1>Login</h1>
             <form>
-                <label htmlFor="username">Username:</label>
-                <input type="text" id="username" name="username"></input>
+                <div className='inlabel'>
+                <input type="text" id="username" name="username" placeholder='Enter Username'></input>
+                </div>
                 <br></br>
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password"></input>
+                <div className='inlabel'>
+                <input type="password" id="password" name="password" placeholder='Enter Password'></input>
                 <br></br>
-                <button type="submit" value="Login"></button>
+                </div>
+                <button type="submit" value="Login">Login</button>
+                <br></br>
+                <a href="null">Forgot password?</a>
+                <a href="null">First Time user</a>
             </form>
         </div>
         </div>

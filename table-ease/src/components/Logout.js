@@ -2,9 +2,11 @@ import react from 'react';
 
 export default function Logout() {
     return (
-        <div>
+        <><div>
             <h1>Logout</h1>
             <p>You have been successfully logged out.</p>
-        </div>
+        </div><div>
+                <a href='null'>Back to Login</a>
+            </div></>
     );
 }

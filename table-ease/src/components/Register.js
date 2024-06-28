@@ -18,7 +18,7 @@ export default function Register() {
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email"></input>
                     <br></br>
-                    <button type="submit" value="Register"></button>
+                    <button type="submit" value="Register">Sign Me Up!</button>
                 </form>
             </div>
         </div>
