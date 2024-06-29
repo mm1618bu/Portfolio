@@ -10,6 +10,8 @@ import Homepage from './components/Homepage';
 import AdminDashboard from './components/AdminDashboard';
 import Sidebar from './components/Sidebar';
 import DiningRoomImage from './assets/images/diningroom.png';
+import SVGComponent from './components/SVGComponent';
+import ContainerComponent from './components/ContainerComponent';
 
 export default function App() {
   return (
@@ -25,6 +27,8 @@ export default function App() {
         <PageNotFound />
         <ForgotPassword />
         <AdminDashboard />
+        <SVGComponent />
+        <ContainerComponent />
       </div>
     </div>
   );

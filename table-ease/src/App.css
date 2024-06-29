@@ -2,7 +2,7 @@
     --primary-color: #5c5c5c;
     --secondary-color: #D67C13;
     --font-color: #333;
-    --background-color: #f4f4f4;
+    --background-color: #ffffff;
     --border-radius: 5px;
 }
 
@@ -68,6 +68,20 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 1360px;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 10px;
+  padding: 2px;
+}
+
+svg {
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 
 section {
   background-color: var(--background-color);
