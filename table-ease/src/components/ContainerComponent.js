@@ -5,7 +5,7 @@ import '../App.css'; // Ensure you have this file for custom styles
 const ContainerComponent = () => {
     return (
         <div className="container">
-            {Array.from({ length: 16 }, (_, index) => (
+            {Array.from({ length: 8 }, (_, index) => (
                 <SVGComponent key={index} />
             ))}
         </div>

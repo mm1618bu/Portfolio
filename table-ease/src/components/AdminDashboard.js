@@ -18,7 +18,20 @@ const AdminDashboard = () => {
     ]);
 
     const addBooking = (newBooking) => {
-        setBookings([...bookings, { ...newBooking, id: Date.now() }]);
+        // Combine the date and time of the new booking into a Date object
+        const bookingDateTime = new Date(`${newBooking.date}T${newBooking.time}`);
+        // Get the current date and time
+        const now = new Date();
+        // Calculate the difference in minutes
+        const differenceInMinutes = (bookingDateTime - now) / (1000 * 60);
+    
+        // Check if the booking is at least 10 minutes in advance
+        if (differenceInMinutes >= 10) {
+            setBookings([...bookings, { ...newBooking, id: Date.now() }]);
+        } else {
+            // Optionally return a message or handle the error as needed
+            console.log('Bookings must be made at least 10 minutes in advance.');
+        }
     };
 
     const removeBooking = (id) => {
@@ -103,6 +116,8 @@ const BookingsList = ({ bookings, removeBooking }) => {
                             <td>{booking.table}</td>
                             <td>
                                 <button onClick={() => removeBooking(booking.id)}>Remove</button>
+                                <button>Edit</button>
+                                <button>Checkin</button>
                             </td>
                         </tr>
                     ))}
