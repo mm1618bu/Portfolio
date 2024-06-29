@@ -1,12 +1,13 @@
 import React from 'react';
+import '../App.css';
 
 export default function Register() {
     return (
-        <div className='registerpage'>
-            <div className='registerbanner'>
+        <div className='page'>
+            <div className='banner'>
 
             </div>
-            <div className='registerportal'>
+            <div className='portal'>
                 <h1>Register</h1>
                 <form>
                     <label for="username">Username:</label>

@@ -1,15 +1,11 @@
 import React from 'react';
 import '../App.css';
+import DiningRoomImage from '../assets/images/diningroom.png';
 
 const Homepage = () => {
     return (
         <div className="homepage">
-            <header className="homepage-header">
-                <h1>Welcome to Our Landing Page!</h1>
-                <p>This is the homepage of our website.</p>
-                <p>Feel free to customize this page with your own content.</p>
-            </header>
-
+            <img src={DiningRoomImage} alt="Dining Room" className="homepage-image"/> {/* Use an img tag with the imported image */}
             <section className="team">
                 <h2>Meet Our Team</h2>
                 <div className="team-columns">

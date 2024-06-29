@@ -2,11 +2,11 @@ import '../App.css';
 
 export default function Login() {
     return (
-        <div className='loginpage'>
-        <div className='loginbanner'>
+        <div className='page'>
+        <div className='banner'>
 
         </div>
-        <div className='loginportal'>
+        <div className='portal'>
             <h1>Login</h1>
             <form>
                 <div className='inlabel'>

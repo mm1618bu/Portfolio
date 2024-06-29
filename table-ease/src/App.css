@@ -13,10 +13,6 @@
   height: 100vh; /* Adjust the height as needed */
 }
 
-.Sidebar {
-  grid-area: sidebar;
-  /* Additional styles for your sidebar */
-}
 
 .Content {
   grid-area: content;
@@ -31,11 +27,30 @@ body {
   padding: 0;
 }
 
+@media (max-width: 768px) {
+  .App {
+    grid-template-columns: 1fr; /* Take up full width */
+    grid-template-rows: auto 1fr; /* Adjust rows for mobile */
+    grid-template-areas:
+      "content"
+      "sidebar";
+  }
+
+  .Sidebar {
+    /* Optional: Hide the sidebar by default on mobile, show with a toggle button */
+    display: none;
+  }
+
+  /* Adjust content and other elements as needed for mobile */
+  .Content {
+    padding: 10px; /* Add some padding on mobile for better readability */
+  }
+}
 
 .homepage {
-  max-width: 1200px;
+  max-width: 1360px;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .homepage-header {
@@ -47,8 +62,15 @@ body {
   margin-bottom: 20px;
 }
 
+.homepage-image{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1360px;
+}
+
 section {
-  background-color: white;
+  background-color: var(--background-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -72,7 +94,7 @@ th, td {
 }
 
 thead {
-  background-color: #f4f4f4;
+  background-color: var(--background-color);
 }
 
 .team-columns {
@@ -82,7 +104,7 @@ thead {
 
 .team-member {
   width: 30%;
-  background-color: #f4f4f4;
+  background-color: var(--background-color);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -103,7 +125,7 @@ button{
   margin: 2vh;
 }
 
-.loginpage, .registerpage {
+.page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,8 +133,8 @@ button{
   background-color: var(--background-color); /* Replace with your background color variable */
 }
 
-.loginportal, .registerportal {
-  background: white;
+.portal {
+  background: var(--background-color);
   padding: 40px; /* Reduced padding for a more compact feel */
   border-radius: 8px; /* Adjusted border radius for smoother edges */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
@@ -121,7 +143,7 @@ button{
   text-align: center; /* Center align content inside login portal */
 }
 
-.loginbanner, .registerbanner {
+.banner {
   font-size: 24px; /* Increased font size for emphasis */
   font-weight: bold; /* Bold font weight for prominence */
   color: var(--primary-color); /* Replace with your primary text color */
@@ -153,7 +175,7 @@ input[type="text"], input[type="password"] {
   width: 100%; /* Full width button */
   padding: 12px; /* Increased padding */
   background-color: var(--primary-color); /* Replace with your primary button color */
-  color: white; /* White text color */
+  color: var(--background-color); /* White text color */
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -174,7 +196,7 @@ input[type="text"], input[type="password"] {
   align-items: center;
   background-color: var(--primary-color);
   padding: 10px 20px;
-  color: white;
+  color: var(--background-color);
 }
 
 .navlinks {
@@ -183,7 +205,7 @@ input[type="text"], input[type="password"] {
 }
 
 .navlinks a {
-  color: white;
+  color: var(--background-color);
   text-decoration: none;
   padding: 5px 10px;
   border-radius: var(--border-radius);
@@ -198,7 +220,7 @@ input[type="text"], input[type="password"] {
   width: 250px;
   height: 100vh;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--background-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -206,6 +228,7 @@ input[type="text"], input[type="password"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-area: sidebar;
 }
 
 .sidebarlinks {
@@ -215,7 +238,7 @@ input[type="text"], input[type="password"] {
 }
 
 .sidebar a {
-  color: white;
+  color: var(--background-color);
   text-decoration: none;
   padding: 10px 15px;
   width: 100%;

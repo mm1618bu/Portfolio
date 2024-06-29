@@ -9,11 +9,13 @@ import ForgotPassword from './components/ForgotPassword';
 import Homepage from './components/Homepage';
 import AdminDashboard from './components/AdminDashboard';
 import Sidebar from './components/Sidebar';
+import DiningRoomImage from './assets/images/diningroom.png';
 
 export default function App() {
   return (
     <div className="App">
       <Sidebar className="Sidebar"/>
+      <img src={DiningRoomImage} alt="Dining Room" className="homepage-image"/> 
       <div className="Content">
         <Navbar />
         <Homepage />
