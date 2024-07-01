@@ -56,15 +56,16 @@ const AdminDashboard = () => {
 
     return (
         <div className="dashboard">
-            <header className="dashboard-header">
-                <h1>Admin Dashboard</h1>
-                <div className="stats">
-                    <div className="stat">Total Bookings: <span>{bookings.length}</span></div>
-                    <div className="stat">Available Tables: <span>{tables.filter(table => table.status === 'Available').length}</span></div>
-                    <div className="stat">Daily Revenue: <span>$1500</span></div>
-                    <div className="stat">Customer Satisfaction: <span>4.5/5</span></div>
-                </div>
-            </header>
+        <header className="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <div className="stats">
+                <div className="stat">Total Bookings: <span>{bookings.length}</span></div>
+                <div className="stat">Available Tables: <span>{tables.filter(table => table.status === 'Available').length}</span></div>
+                <div className="stat">Daily Revenue: <span>$1500</span></div>
+                <div className="stat">Customer Satisfaction: <span>4.5/5</span></div>
+            </div>
+        </header>
+
             
             <main className="dashboard-main">
                 <section className="bookings-management">
@@ -328,6 +329,7 @@ const AddEmployeeForm = ({ addEmployee }) => {
                     required
                 />
             </label>
+            <br></br>
             <label>
                 Position:
                 <input
@@ -337,6 +339,7 @@ const AddEmployeeForm = ({ addEmployee }) => {
                     required
                 />
             </label>
+            <br></br>
             <label>
                 Status:
                 <select value={status} onChange={(e) => setStatus(e.target.value)} required>
@@ -344,6 +347,8 @@ const AddEmployeeForm = ({ addEmployee }) => {
                     <option value="Inactive">Inactive</option>
                 </select>
             </label>
+            <br></br>
+            <br></br>
             <button type="submit">Add Employee</button>
         </form>
     );
