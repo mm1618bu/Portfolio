@@ -19,7 +19,7 @@ export default function Login() {
                 </div>
                 <button type="submit" value="Login">Login</button>
                 <br></br>
-                <a href="null">Forgot password?</a>
+                <a href="null">Forgot password?</a><br></br>
                 <a href="null">First Time user</a>
             </form>
         </div>
