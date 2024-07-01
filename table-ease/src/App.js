@@ -19,7 +19,6 @@ export default function App() {
       <Sidebar className="Sidebar"/>
       <img src={DiningRoomImage} alt="Dining Room" className="homepage-image"/> 
       <div className="Content">
-        <Navbar />
         <Homepage />
         <Login />
         <Register />
