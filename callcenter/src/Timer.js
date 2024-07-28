@@ -5,10 +5,10 @@ const Timer = ({ agents, updateAgentState }) => {
   const [stateDurations] = useState({
     Talking: 600, // 180 seconds (3 minutes) in the Talking state
     Break: 600, // 20 seconds (for example) in the Break state
-    Ready: 30, // 30 seconds (for example) in the Ready state
+    Ready: 240, // 30 seconds (for example) in the Ready state
     Lunch: 1800,
-    Project: 120,
-    Meeting: 120,
+    Project: 180,
+    Meeting: 180,
     NotReady: 30
   });
 
