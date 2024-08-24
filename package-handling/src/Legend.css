@@ -1,0 +1,33 @@
+/* Container for the list */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Use a clean, sans-serif font */
+    max-width: 600px; /* Set a max width for better readability */
+    margin: 0 auto; /* Center the list horizontally */
+  }
+  
+  /* Style for each list item */
+  li {
+    background-color: #f4f4f4; /* Light grey background for list items */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding around the text */
+    margin-bottom: 8px; /* Space between items */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover effect for list items */
+  li:hover {
+    background-color: #e0e0e0; /* Slightly darker grey on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  }
+  
+  
+  /* Style for tech stack components */
+  li span {
+    font-weight: normal; /* Normal weight for the components */
+    color: #555; /* Darker grey color for components */
+  }
+  
