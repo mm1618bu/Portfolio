@@ -1,0 +1,39 @@
+.schedule-container {
+    padding: 20px;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .available-shifts {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grid-header, .employee-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .employee-name {
+    width: 150px;
+    font-weight: bold;
+  }
+  
+  .shift {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  

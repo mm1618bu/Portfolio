@@ -67,5 +67,6 @@ td {
 }
 
 .sidebyside{
-  display: flex; /* This line makes the container a flex container */
+  display: grid;
+  grid-template-columns: 2fr 2fr;
 }
