@@ -1,21 +1,23 @@
 /* Shift card container */
 .shift-card {
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 15px;
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(31, 14, 122, 0.459);
+  width: 50%;
 }
 
 /* Shift information section */
 .shift-info {
-  display: flex;
-  flex-direction: column;
+  display: inline-grid;
   width: 70%;
+  float: inline-start;
+  text-align: left;
 }
 
 .shift-info h3 {
@@ -50,12 +52,13 @@
   display: flex;
   align-items: center;
   margin-top: 3px;
-  color: #9b1c31; /* Use a lighter color for warnings */
+  margin-left: 8px;
+  color: #2563eb; /* Use a lighter color for warnings */
 }
 
 .warning span, .ineligible span {
   margin-right: 5px;
-  color: #9b1c31;
+  color: #2563eb;
 }
 
 /* Shift rate and action section */
@@ -92,4 +95,64 @@
 .details-button:hover {
   background-color: #2563eb;
   color: #ffffff;
+}
+
+.assignment{
+  font-size: 12px;
+  font-weight: bold;
+  color: #d84207;
+}
+
+/* Container for the checkboxes */
+.checkbox-label {
+  display: flex;
+  align-items: center; /* Aligns the checkbox and label text vertically */
+  margin: 8px 0; /* Adds spacing between each label */
+  cursor: pointer; /* Changes the cursor to pointer on hover */
+  font-size: 16px; /* Sets a comfortable font size */
+  color: #333; /* Dark gray color for text */
+}
+
+/* Checkbox input styling */
+.checkbox-input {
+  margin-right: 8px; /* Adds space between the checkbox and the label text */
+  width: 18px; /* Customize size of checkbox */
+  height: 18px;
+  accent-color: #4CAF50; /* Customize checkbox accent color for modern browsers */
+}
+
+/* Add a hover effect */
+.checkbox-label:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  border-radius: 4px; /* Rounded corners for hover effect */
+  padding: 4px; /* Adds padding to the label on hover */
+}
+
+/* Optional: Add custom checkbox styles (modern approach) */
+.checkbox-input {
+  appearance: none; /* Removes default checkbox styling */
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-input:checked {
+  background-color: #4CAF50; /* Green color for checked state */
+  border-color: #4CAF50; /* Match border color when checked */
+}
+
+.checkbox-input:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg); /* Creates a checkmark */
 }
